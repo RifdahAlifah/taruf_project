@@ -1,29 +1,55 @@
 <html>
-    <head>
-        <style>
-        body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
 
-        img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+<head>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins";
+            overflow-x: hidden;
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            margin: 0px;
+            border: none;
+            padding: 0px;
+        }
 
 
-         div { position: absolute; }
+        div {
+            position: absolute;
+        }
 
-         #content-container { display: block; position: relative; width: 360px;  margin-left: auto; margin-right: auto;  }
-            
-        #content-container > div{ position: relative; top:inherit; }
+        #content-container {
+            display: block;
+            position: relative;
+            width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #content-container>div {
+            position: relative;
+            top: inherit;
+        }
+
         #page_main_mobile {
             top: 0px;
             left: 0px;
             width: 360px;
             height: 640px;
         }
+
         #bg_main_mobile {
             top: 0px;
             left: 0px;
             width: 360px;
             height: 640px;
-            background:rgba(59,85,82,1);
+            background: rgba(59, 85, 82, 1);
         }
+
         #bg_rt_login {
             top: 187px;
             left: -1px;
@@ -34,8 +60,9 @@
             -moz-border-radius: 100px;
             -webkit-border-radius: 100px;
             border-radius: 100px 0px 0px 0px;
-            background:rgba(254.01,229.84,191.18,1);
+            background: rgba(254.01, 229.84, 191.18, 1);
         }
+
         #txt_login {
             top: 50px;
             left: 149px;
@@ -46,23 +73,47 @@
             font-size: 24px;
             font-weight: bold;
             text-align: left;
-            color:#000000;
+            color: #000000;
         }
-        #group_280 {
+
+        #position_box {
             top: 130px;
             left: 50px;
             width: 260px;
             height: 40px;
         }
+
+        #position_box_rg {
+            top: 60px;
+            left: 50px;
+            width: 260px;
+            height: 40px;
+        }
+
         #box_input {
             width: 262px;
             height: 42px;
+            padding-left: 70px;
             margin-bottom: 10px;
             margin-right: 50px;
             border-radius: 30px;
             border: 1px solid #3b5552;
-            background:rgba(255,255,255,0);
+            background: rgba(255, 255, 255, 0.5);
+            font-family: Poppins;
         }
+
+        #box_address {
+            width: 262px;
+            height: 42px;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            margin-right: 50px;
+            border-radius: 30px;
+            border: 1px solid #3b5552;
+            background: rgba(255, 255, 255, 0.5);
+            font-family: Poppins;
+        }
+
         #email {
             top: 12px;
             left: 73px;
@@ -72,8 +123,9 @@
             font-family: Poppins;
             font-size: 14px;
             text-align: left;
-            color:#818181;
+            color: #818181;
         }
+
         .email2 {
             top: 12px;
             left: 73px;
@@ -83,79 +135,254 @@
             font-family: Poppins;
             font-size: 14px;
             text-align: left;
-            color:#818181;
+            color: #818181;
         }
-        /* #markunread {
+
+        #txt_email {
+            top: 10px;
+            left: 70px;
+            width: 18px;
+            height: 13px;
+            transition: 0.5s;
+        }
+
+        #ic_email {
             top: 15px;
             left: 25px;
-            width: 15.6px;
-            height: 12px;
-        } */
-        #line_20 {
+            width: 18px;
+            height: 13px;
+        }
+
+        #ic_password {
+            top: 62px;
+            left: 24px;
+            width: 18px;
+            height: 17px;
+        }
+
+        #ic_bornday {
+            top: 115px;
+            left: 24px;
+            width: 18px;
+            height: 17px;
+        }
+
+        #ic_gender {
+            top: 168px;
+            left: 24px;
+            width: 19px;
+            height: 19px;
+        }
+
+        #ic_age {
+            top: 220px;
+            left: 24px;
+            width: 21px;
+            height: 19px;
+        }
+
+        #ic_job {
+            top: 528px;
+            left: 24px;
+            width: 18px;
+            height: 18px;
+        }
+
+        #ic_status {
+            top: 580px;
+            left: 24px;
+            width: 18px;
+            height: 18px;
+        }
+
+        #ic_guardian {
+            top: 633px;
+            left: 24px;
+            width: 17px;
+            height: 18px;
+        }
+
+        #line_2 {
             top: 20px;
             left: 43px;
             width: 26px;
             height: 1px;
-            
-            -ms-transform:rotate(90deg);
-            -o-transform:rotate(90deg);
-            -webkit-transform:rotate(90deg);
-            -moz-transform:rotate(90deg);
-            transform:rotate(90deg);
-            background:#818181;
+            overflow: hidden;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
         }
-        #line_21 {
+
+        #line_1 {
             top: 70px;
             left: 43px;
             width: 26px;
             height: 1px;
-            -ms-transform:rotate(90deg);
-            -o-transform:rotate(90deg);
-            -webkit-transform:rotate(90deg);
-            -moz-transform:rotate(90deg);
-            transform:rotate(90deg);
-            background:#818181;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
         }
-        #group_287 {
+
+        #line_3 {
+            top: 124px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #line_4 {
+            top: 176px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #line_5 {
+            top: 228px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #line_6 {
+            top: 540px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #line_7 {
+            top: 593px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #line_8 {
+            top: 645px;
+            left: 43px;
+            width: 26px;
+            height: 1px;
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: #818181;
+        }
+
+        #position_btn_login {
             top: 300px;
-            left: 69px;
-            width: 222px;
-            height: 38px;
+            left: 70px;
+            align-items: center;
+        }
+
+        #position_btn_register {
+            top: 220px;
+            left: 20px;
+            align-items: center;
         }
 
 
         .btn_main {
             top: 0px;
             left: 0px;
-            width: 222px;
-            height: 38px;
+            width: 225px;
+            height: 28px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             -moz-border-radius: 10px;
             -webkit-border-radius: 10px;
             border-radius: 10px;
-            -ms-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-            -o-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-            -webkit-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-            -moz-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-            box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-            background:rgba(214.69,165.7,103.44,1);
+            -ms-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -o-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            background: rgba(214.69, 165.7, 103.44, 1);
         }
-        #login_ek4 {
-            top: 9px;
-            left: 93px;
-            width: 46px;
-            height: 31px;
+
+        .btn_resend {
+            top: 0px;
+            left: 0px;
+            width: 225px;
+            height: 28px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -ms-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -o-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            background: #FFFFFF;
+        }
+
+        .button-brown:hover {
+            background: #9F743E;
+        }
+
+        #set_btn_login {
+            padding-top: 8px;
             overflow: hidden;
             font-family: Poppins;
             font-size: 14px;
-            font-weight: bold;
-            text-align: left;
-            color:#FFFFFF;
+            font-weight: 500;
+            text-align: center;
+            color: #FFFFFF;
         }
 
-        #_lupa_password_ {
-            top: 240px;
+        #set_btn_resend {
+            padding-top: 8px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            color: #000;
+            ;
+        }
+
+        #forgot_pw {
+            top: 230px;
             left: 204px;
             width: 103px;
             height: 26px;
@@ -164,65 +391,1025 @@
             font-size: 12px;
             text-decoration: underline;
             text-align: center;
-            color:#3B5552;
+            color: #3B5552;
         }
-     </style>
-    </head>
-    <body>
+
+        #position_nha {
+            top: 350px;
+            left: 91px;
+            width: 120px;
+            height: 18px;
+        }
+
+        #no_have_account {
+
+            left: -2px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            text-align: center;
+            color: #3B5552;
+        }
+
+        #txt_register {
+            left: 124px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: #3B5552;
+        }
+
+        #page_forgot_password {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #bg_rt_forgot_pw {
+            top: 78px;
+            left: 0px;
+            width: 360px;
+            height: 562px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            border-radius: 100px 0px 0px 0px;
+            background: rgba(254.01, 229.84, 191.18, 1);
+        }
+
+        #set_forgot_pw {
+            position: absolute;
+            width: 154px;
+            height: 30px;
+            left: 103px;
+            top: 85px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #3B5552;
+        }
+
+        #txt_input_email {
+            position: absolute;
+            width: 301px;
+            height: 56px;
+            left: 46px;
+            top: 135px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #3B5552;
+        }
+
+        #position_email_fp {
+            top: 100px;
+            align-content: center;
+        }
+
+        #position_rg {
+            top: 100px;
+
+            align-content: center;
+        }
+
+        #ic_button_back {
+            width: 19px;
+            height: 17px;
+            left: 20px;
+            top: 35px;
+        }
+
+        #page_check_email {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #check_email {
+            width: 128.24px;
+            height: 72px;
+            left: 116px;
+            top: 180px;
+        }
+
+        #txt_check_email {
+            top: 300px;
+            left: 30px;
+            width: 297px;
+            height: 36px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            text-align: center;
+            line-height: 16px;
+            color: #3B5552;
+        }
+
+        #page_register {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 1051px;
+        }
+
+        #page_terms {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #page_policy {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #bg_register {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 1051px;
+            background: rgba(59, 85, 82, 1);
+        }
+
+        #bg_terms {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+            background: rgba(254.01, 229.84, 191.18, 1);
+        }
+
+        #bg_rt_register {
+            top: 118px;
+            left: 0px;
+            width: 360px;
+            height: 933px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            border-radius: 100px 0px 0px 0px;
+            background: rgba(254.01, 229.84, 191.18, 1);
+        }
+
+        #title_register {
+            top: 28px;
+            left: 130px;
+            width: 113px;
+            height: 53px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 500;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        #required_for_woman {
+            width: 182px;
+            margin-bottom: 100px;
+            left: 14px;
+            font-family: Poppins;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+            color: #000000;
+        }
+
+        #match_ktp {
+            width: 196px;
+            height: 15px;
+            left: 61px;
+            top: 35px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+            color: #DF1A1A;
+        }
+
+        #position_btn_next {
+            height: 38px;
+            left: 15px;
+            top: 740px;
+            background: #D7A667;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        #position_have_account {
+            top: 784px;
+            left: 47px;
+            text-align: center;
+            width: 164px;
+            height: 18px;
+        }
+
+        #have_account {
+            top: 0px;
+            left: -2px;
+            width: 129px;
+            height: 26px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            text-align: center;
+            color: #3B5552;
+
+        }
+
+        #login_have_account {
+            top: 0px;
+            left: 126px;
+            width: 42px;
+            height: 26px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: #3B5552;
+        }
+
+        #position_terms_policy {
+            top: 60px;
+            height: 14px;
+            left: -40px;
+
+
+        }
+
+        #terms {
+            top: 0px;
+            left: -6px;
+            width: 114px;
+            height: 22px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 14px;
+            color: #3B5552;
+        }
+
+        #policy {
+            top: 0px;
+            left: 135px;
+            width: 114px;
+            height: 22px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 14px;
+            color: #3B5552;
+        }
+
+        #and {
+            top: 0px;
+            left: 105px;
+            width: 34px;
+            height: 22px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 12px;
+            text-align: center;
+            line-height: 14px;
+            color: #3B5552;
+        }
+
+        #header_green {
+            position: absolute;
+            width: 360px;
+            height: 72px;
+            left: 0px;
+            top: 0px;
+
+            background: #3B5552;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        #title_terms {
+            position: absolute;
+            width: 179px;
+            height: 30px;
+            left: 92px;
+            top: 26px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        #page_upload_photo {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 720px;
+        }
+
+        #bg_upload_photo {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 718px;
+            background: rgba(59, 85, 82, 1);
+        }
+
+        #bg_rt_upload {
+            position: absolute;
+            width: 360px;
+            height: 600px;
+            left: 0px;
+            top: 118px;
+
+            background: #FEE6BF;
+            border-radius: 100px 0px 0px 0px;
+        }
+
+        #upload_photo {
+            position: absolute;
+            width: 260px;
+            height: 40px;
+            left: 50px;
+            top: 100px;
+            margin-bottom: 10px;
+            background: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #set_upload_photo {
+            top: 9px;
+            left: 72px;
+            width: 126px;
+            height: 31px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 14px;
+            text-align: left;
+            color: #4F4F4F;
+
+        }
+
+        #position_upload_photo {
+            top: 0px;
+            left: 0px;
+            width: 260px;
+            height: 202px;
+        }
+
+        #position_rg_etc {
+            top: -270px;
+            left: 50px;
+
+        }
+
+        #ad_data {
+            width: 250px;
+            height: 189px;
+
+            background: #FFFFFF;
+            border-radius: 20px;
+        }
+
+        #bg_ad_data {
+            width: 250px;
+            height: 189px;
+            left: 0px;
+            top: 0px;
+
+            background: #3B5552;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+        }
+
+        #txt_processed_data {
+            position: absolute;
+            width: 208px;
+            height: 24px;
+            left: 21px;
+            top: 25px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+
+        }
+
+        #desc_txt_data {
+            position: absolute;
+            width: 190px;
+            height: 28px;
+            left: 25px;
+            top: 112px;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 11px;
+            line-height: 14px;
+            /* or 140% */
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        #ic_processed {
+            position: absolute;
+            width: 49.93px;
+            height: 50px;
+            left: 101px;
+            top: 55px;
+        }
+
+        #page_processed_data {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #bg_processed_data {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+            background: rgba(59, 85, 82, 1);
+        }
+
+        #bg_rt_processed_data {
+            width: 360px;
+            height: 562px;
+            left: 0px;
+            top: 78px;
+
+            /* cream */
+
+            background: #FEE6BF;
+            border-radius: 100px 0px 0px 0px;
+        }
+
+        #txt_page_processed_data {
+            position: absolute;
+            width: 208px;
+            height: 24px;
+            left: 76px;
+            top: 210px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height */
+            color: #000000;
+
+        }
+
+        #illus_time {
+            position: absolute;
+            width: 206.7px;
+            height: 148.09px;
+            left: 77px;
+            top: 263px;
+        }
+
+        #desc_page_txt_data {
+            position: absolute;
+            width: 220px;
+            height: 28px;
+            left: 70px;
+            top: 439px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: #000000;
+        }
+
+        #ad_data_accept {
+            width: 250px;
+            height: 189px;
+
+            background: #FFFFFF;
+            border-radius: 20px;
+
+        }
+
+        #ad_data_refused {
+            width: 250px;
+            height: 189px;
+
+            background: #FFFFFF;
+            border-radius: 20px;
+        }
+
+        .btn_ad {
+            position: absolute;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 21px;
+            text-align: center;
+            color: #000000;
+
+            width: 96px;
+            height: 22px;
+            left: 77px;
+            top: 150px;
+
+            background: #D7A667;
+            border-radius: 5px;
+        }
+
+        #page_rg_phone {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 60px;
+        }
+
+        #txt_rg_phone {
+            position: absolute;
+            width: 203px;
+            height: 30px;
+            left: 79px;
+            top: 136px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: #3B5552;
+        }
+
+        #txt_input_phone {
+            position: absolute;
+            width: 223px;
+            height: 18px;
+            left: 68px;
+            top: 208px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            color: #3B5552;
+        }
+
+        #position_phone_num {
+            top: 234px;
+            left: 50px;
+            align-content: center;
+
+        }
+
+        .position_reg {
+            top: -545px;
+        }
+    </style>
+</head>
+
+<body>
     <div id="content-container">
         <!-- Start Mobile -->
-        <div id="page_main_mobile"  >
-            
-            <div id="bg_main_mobile"  >
-                <div id="bg_rt_login"  >
-                    <div id="txt_login" >
+        <div id="page_main_mobile">
+            <div id="bg_main_mobile">
+                <div id="bg_rt_login">
+                    <div id="txt_login">
                         Login
                     </div>
-                    <div id="group_280" >
-                        <img src="skins/markunread.png" id="markunread" style="padding-left: 2px; padding-top: 2px;" />
-                        <div id="line_20" ></div>
-                        <input id="box_input" type="text" name="email" value="" style="padding-left: 60px;"><br>    
-                        <img src="skins/markunread.png" id="markunread" style="padding-left: 2px; padding-top: 2px;" />
-                        <div id="line_21" ></div>
-                        <input id="box_input" type="password" name="password" value="" style="padding-left: 60px;"><br>
-                    
+                    <div id="position_box">
+                        <img src="assets/ic_email.png" id="ic_email" />
+                        <div id="line_2"></div>
+                        <input id="box_input" type="text" name="email" value="" required placeholder="Email"><br>
+                        <img src="assets/ic_password.png" id="ic_password"
+                            style="padding-left: 2px; padding-top: 2px;" />
+                        <div id="line_1"></div>
+                        <input id="box_input" type="password" name="password" value="" required
+                            placeholder="Password"><br>
                     </div>
-                    <a id="_lupa_password__link" href="google.com" >
-                        <div id="_lupa_password_" >
+                    <a id="forgot_pw_link" href="google.com">
+                        <div id="forgot_pw">
                             Lupa Password?
                         </div>
+                    </a>
+
+                    <div id="position_btn_login">
+                        <div class="btn_main button-brown" id="set_btn_login" type="submit">
+                            Login
+                        </div>
+                    </div>
+                    <div id="position_nha">
+                        <div id="no_have_account">
+                            Belum punya akun ?
+                        </div>
+                        <a id="register_link" href="google.com">
+                            <div id="txt_register">
+                                Register
+                            </div>
                         </a>
 
-                    <div id="group_287"  >
-                        <button class="btn_main" id="login_ek4" style="width: 200px; padding-left: 20px;" >
-                            Login
-                        </button>    
-                                
-                          
-                        
-                        
-    
                     </div>
-                    
+
                 </div>
             </div>
-        
+        </div>
+
+        <div id="page_forgot_password">
+            <div id="bg_main_mobile">
+                <a id="back_fr_fp" href="login.html">
+                    <img src="assets/ic_button_back.png" id="ic_button_back" />
+                </a>
+                <div id="bg_rt_forgot_pw">
+                    <div id="set_forgot_pw">
+                        Lupa Password
+                    </div>
+                    <div id="txt_input_email">
+                        Masukkan alamat email yang telah terdaftar<br />di media Taruf. Kami akan
+                        mengirimkan<br />instruksi untuk mengganti password ke alamat email tersebut.
+                        <div id="position_email_fp">
+                            <img src="assets/ic_email.png" id="ic_email" />
+                            <div id="line_2"></div>
+                            <input id="box_input" type="email" name="email" value="" required placeholder="Email"><br>
+                            <div id="position_btn_register">
+                                <div class="btn_main button-brown" id="set_btn_login" type="button">
+                                    Register
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_check_email">
+            <div id="bg_main_mobile">
+                <a id="back_fr_fp" href="google.com">
+                    <img src="assets/ic_button_back.png" id="ic_button_back" />
+                </a>
+                <div id="bg_rt_forgot_pw">
+                    <div id="set_forgot_pw">
+                        Periksa Email
+                    </div>
+                    <img src="assets/check_email.png" id="check_email" />
+                    <div id="txt_check_email">
+                        Kami akan mengirimkan instruksi untuk mengganti password ke alamat email mu
+                    </div>
+                    <div id="position_btn_login">
+                        <div class="btn_main button-brown" id="set_btn_login" type="submit" style="margin-top: 80px;">
+                            Buka Email
+                        </div>
+                    </div>
+                    <div id="position_btn_login">
+                        <div class="btn_resend button-brown" id="set_btn_resend" type="submit"
+                            style="margin-top: 140px;">
+                            Kirim Ulang
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
 
         </div>
 
-        <div id="page_lupa_password">
-            
+        <div id="page_register">
+            <div id="bg_register">
+                <div id="title_register">Register</div>
+                <a id="back_fr_fp" href="google.com">
+                    <img src="assets/ic_button_back.png" id="ic_button_back" />
+                </a>
+                <div id="bg_rt_register">
+                    <div id="match_ktp">
+                        *Form disesuaikan dengan data di KTP
+                    </div>
+                    <div id="position_box_rg">
+                        <img src="assets/ic_email.png" id="ic_email" />
+                        <div id="line_2"></div>
+                        <input id="box_input" type="email" name="nik" value="" required placeholder="NIK"><br>
+                        <img src="assets/ic_fullname.png" id="ic_password" />
+                        <div id="line_1"></div>
+                        <input id="box_input" type="text" name="fullname" value="" required
+                            placeholder="Nama Lengkap"><br>
+                        <img src="assets/ic_bornday.png" id="ic_bornday" />
+                        <div id="line_3"></div>
+                        <input id="box_input" type="date" name="bornday" value="" required placeholder="Tanggal Lahir"
+                            style="padding-right: 20px;"><br>
+                        <img src="assets/ic_gender.png" id="ic_gender" />
+                        <div id="line_4"></div>
+                        <input id="box_input" type="text" name="gender" value="" required
+                            placeholder="Jenis Kelamin"><br>
+                        <img src="assets/ic_age.png" id="ic_age" />
+                        <div id="line_5"></div>
+                        <input id="box_input" type="number" name="age" value="" required placeholder="Umur"><br>
+                        <p style="margin-top: 5px;"> Alamat</p>
+
+
+                        <input id="box_address" type="text" name="street" value="" required
+                            placeholder="Nama Jalan/Cluster" style="margin-top: -10px;"><br>
+                        <input id="box_address" type="text" name="street" value="" required placeholder="RT/RW"><br>
+                        <input id="box_address" type="text" name="street" value="" required placeholder="Kecamatan"><br>
+                        <input id="box_address" type="text" name="street" value="" required
+                            placeholder="Kabupaten/Kota">
+                        <p>
+
+                        <div id="line_6"></div>
+                        <input id="box_input" type="text" name="job" value="" required placeholder="Pekerjaan"><br>
+                        <img src="assets/ic_job.png" id="ic_job" />
+
+                        <div id="line_7"></div>
+                        <input id="box_input" type="text" name="status" value="" required placeholder="Status">
+                        <pr>
+                            <img src="assets/ic_status.png" id="ic_status" />
+
+                            <div id="line_8"></div>
+                            <input id="box_input" type="email" name="guardian" value="" required
+                                placeholder="Email Wali"><br>
+                            <img src="assets/ic_guardian.png" id="ic_guardian" />
+
+                            <div id="required_for_woman" style="margin-top: -5px;">
+                                *Email wajib diisi bagi wali akhwat
+                            </div>
+                            <div id="position_btn_next">
+                                <div class="btn_main button-brown" id="set_btn_login" type="submit">
+                                    Selanjutnya
+                                </div>
+                            </div>
+                            <div id="position_have_account">
+                                <div id="have_account">
+                                    Sudah punya akun ?
+                                </div>
+                                <a id="log_in_link" href="login.html">
+                                    <div id="login_have_account">
+                                        Log in
+                                    </div>
+
+                                    <div id="position_terms_policy">
+                                        <a id="terms_link" href="syarat_ketentuan.html">
+                                            <div id="terms">
+                                                Syarat Ketentuan
+                                            </div>
+                                        </a>
+                                        <div id="and">
+                                            dan
+                                        </div>
+                                        <a id="policy_link" href="kebijakan_privasi.html">
+                                            <div id="policy">
+                                                Kebijakan Privasi
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+                            </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        
 
-        <!-- End Mobile -->
+        <div id="page_terms">
+            <div id="bg_terms">
+                <div id="header_green">
+                    <div id="title_terms">Syarat Ketentuan</div>
+                    <a id="back_fr_fp" href="google.com">
+                        <img src="assets/ic_button_back.png" id="ic_button_back" />
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        <!-- Start Web -->
-    
-        <!-- End Web -->
+        <div id="page_policy">
+            <div id="bg_terms">
+                <div id="header_green">
+                    <div id="title_terms">Kebijakan Privasi</div>
+                    <a id="back_fr_fp" href="google.com">
+                        <img src="assets/ic_button_back.png" id="ic_button_back" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_upload_photo">
+            <div id="bg_upload_photo">
+                <div id="title_register">Register</div>
+                <a id="back_fr_fp" href="google.com">
+                    <img src="assets/ic_button_back.png" id="ic_button_back" />
+                </a>
+                <div id="bg_rt_upload">
+                    <!-- <input id="photo_ktp set_upload_foto" type="file"> -->
+                    <div id="upload_photo">
+                        <div id="set_upload_photo">
+                            Upload Foto KTP
+                        </div>
+                    </div>
+
+                    <div id="upload_photo" style="top: 160px;">
+                        <div id="set_upload_photo">
+                            Upload Foto KK
+                        </div>
+                    </div>
+
+                    <div id="upload_photo" style="top: 220px;">
+                        <div id="set_upload_photo">
+                            Upload Foto Diri
+                        </div>
+                    </div>
+
+                    <div id="upload_photo" style="top: 280px;">
+                        <div id="set_upload_photo">
+                            Upload CV Nikah
+                        </div>
+                    </div>
+                    <div id="position_rg_etc">
+                        <div id="position_btn_next">
+                            <div class="btn_main button-brown" id="set_btn_login" type="submit">
+                                Selanjutnya
+                            </div>
+                        </div>
+                        <div id="position_have_account">
+                            <div id="have_account">
+                                Sudah punya akun ?
+                            </div>
+                            <a id="log_in_link" href="login.html">
+                                <div id="login_have_account">
+                                    Log in
+                                </div>
+
+                                <div id="position_terms_policy">
+                                    <a id="terms_link" href="syarat_ketentuan.html">
+                                        <div id="terms">
+                                            Syarat Ketentuan
+                                        </div>
+                                    </a>
+                                    <div id="and">
+                                        dan
+                                    </div>
+                                    <a id="policy_link" href="kebijakan_privasi.html">
+                                        <div id="policy">
+                                            Kebijakan Privasi
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="ad_data">
+            <div id="bg_ad_data">
+                <div id="txt_processed_data">Datamu sedang diproses</div>
+                <img src="assets/ic_processed.png" id="ic_processed">
+                <div id="desc_txt_data">Proses ini membutuhkan waktu paling lama 24 jam</div>
+            </div>
+
+        </div>
+
+        <div id="page_processed_data">
+            <div id="bg_processed_data">
+                <div id="bg_rt_processed_data">
+                    <div id="txt_page_processed_data">Datamu sedang diproses</div>
+                    <img src="assets/illus_time.png" id="illus_time">
+                    <div id="desc_page_txt_data">Proses ini membutuhkan waktu paling lama 24 jam</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="ad_data_accept">
+            <div id="bg_ad_data">
+                <div id="txt_processed_data" style="text-align-last: center;">Datamu diterima</div>
+                <img src="assets/ic_accept.png" id="ic_processed">
+                <div id="desc_txt_data">Lanjut untuk verifikasi No.telepon dan Email</div>
+                <div class="btn_ad">Lanjut</div>
+            </div>
+
+        </div>
+
+        <div id="ad_data_refused">
+            <div id="bg_ad_data">
+                <div id="txt_processed_data" style="text-align-last: center;">Datamu ditolak</div>
+                <img src="assets/ic_refused.png" id="ic_processed">
+                <div id="desc_txt_data" style="width: 230px; ">Kemungkinan data yang diinput berbeda dengan KTP/KK atau
+                    foto diri tidak valid.</div>
+                <div class="btn_ad">Kembali</div>
+            </div>
+
+        </div>
+
+        <div id="ad_data_refused">
+            <div id="bg_ad_data">
+                <div id="txt_processed_data" style="text-align-last: center;">Datamu ditolak</div>
+                <img src="assets/ic_refused.png" id="ic_processed">
+                <div id="desc_txt_data">Datamu sudah terdaftar</div>
+                <div class="btn_ad">Kembali</div>
+            </div>
+        </div>
+
+        <div id="page_rg_phone">
+            <div id="bg_processed_data">
+                <div id="bg_rt_processed_data">
+                    <div id="txt_rg_phone">Register No.telepon</div>
+                    <div id="txt_input_phone">Masukkan No.Telepon untuk verifikasi </div>
+                    <div id="position_phone_num">
+                        <img src="assets/ic_email.png" id="ic_email" />
+                        <div id="line_2"></div>
+                        <input id="box_input" type="email" name="email" value="" required placeholder="Email"><br>
+                        <div class="position_reg">
+                        <div id="position_btn_next">
+                            <div class="btn_main button-brown" id="set_btn_login" type="submit">
+                                Register
+                            </div>
+                        </div>
+                        <div id="position_have_account">
+                            <div id="have_account">
+                                Sudah punya akun ?
+                            </div>
+                            <a id="log_in_link" href="login.html">
+                                <div id="login_have_account">
+                                    Log in
+                                </div>
+                                <div id="position_terms_policy">
+                                    <a id="terms_link" href="syarat_ketentuan.html">
+                                        <div id="terms">
+                                            Syarat Ketentuan
+                                        </div>
+                                    </a>
+                                    <div id="and">
+                                        dan
+                                    </div>
+                                    <a id="policy_link" href="kebijakan_privasi.html">
+                                        <div id="policy">
+                                            Kebijakan Privasi
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    </body>
-    <footer>
 
-    </footer>
+
+
+    <!-- End Mobile -->
+
+    <!-- Start Web -->
+
+    <!-- End Web -->
+
+
+
+
+    </div>
+
+
+
+    </div>
+</body>
+<footer>
+
+</footer>
+
 </html>
