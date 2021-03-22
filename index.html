@@ -2,6 +2,12 @@
 
 <head>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@100;400&display=swap');
+
+        html {
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
             margin: 0px;
             padding: 0px;
@@ -100,6 +106,7 @@
             border: 1px solid #3b5552;
             background: rgba(255, 255, 255, 0.5);
             font-family: Poppins;
+            outline: none;
         }
 
         #box_address {
@@ -112,6 +119,7 @@
             border: 1px solid #3b5552;
             background: rgba(255, 255, 255, 0.5);
             font-family: Poppins;
+            outline: none;
         }
 
         #email {
@@ -456,7 +464,7 @@
             color: #3B5552;
         }
 
-        #txt_input_email {
+        #txt_fp_input_email {
             position: absolute;
             width: 301px;
             height: 56px;
@@ -988,8 +996,131 @@
 
         }
 
-        .position_reg {
-            top: -545px;
+        #position_sk {
+            top: 238px;
+            left: 47px;
+            text-align: center;
+            width: 164px;
+            height: 18px;
+        }
+
+        #position_btn_rg {
+            height: 38px;
+            left: 15px;
+            top: 192px;
+            background: #D7A667;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        #page_rg_email {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+        }
+
+        #bg_rg_email {
+            position: relative;
+            width: 360px;
+            height: 640px;
+
+            background: #3B5552;
+        }
+
+        #bg_rt_rg_email {
+            position: absolute;
+            width: 360px;
+            height: 562px;
+            left: 0px;
+            top: 78px;
+
+            /* cream */
+
+            background: #FEE6BF;
+            border-radius: 100px 0px 0px 0px;
+
+        }
+
+        #txt_rg_email {
+            top: 100px;
+            left: 112px;
+            width: 136px;
+            height: 30px;
+
+            width: 155px;
+            height: 44px;
+            overflow: hidden;
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            color: #3B5552;
+        }
+
+        #txt_input_email {
+            position: absolute;
+            width: 222px;
+            height: 18px;
+            left: 69px;
+            top: 160px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            color: #3B5552;
+
+        }
+
+        #position_email_rg {
+            top: 190px;
+            left: 50px;
+        }
+
+        #position {
+            align-content: center;
+            top: 280px;
+            justify-content: center;
+            left: 50px;
+        }
+        #page_rg_phone{
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+            background: rgba(59, 85, 82, 1);
+        }
+        #bg_rt_rg_phone{width: 360px;
+            height: 562px;
+            left: 0px;
+            top: 78px;
+
+            /* cream */
+
+            background: #FEE6BF;
+            border-radius: 100px 0px 0px 0px;
+
+        }
+        #page_rg_phone input{
+            width: 225px;
+            height: 28px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -ms-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -o-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+            background: rgba(214.69, 165.7, 103.44, 1);
+        }
+        #page_rg_phone {
+
         }
     </style>
 </head>
@@ -1049,7 +1180,7 @@
                     <div id="set_forgot_pw">
                         Lupa Password
                     </div>
-                    <div id="txt_input_email">
+                    <div id="txt_fp_input_email">
                         Masukkan alamat email yang telah terdaftar<br />di media Taruf. Kami akan
                         mengirimkan<br />instruksi untuk mengganti password ke alamat email tersebut.
                         <div id="position_email_fp">
@@ -1340,54 +1471,74 @@
             </div>
         </div>
 
-        <div id="page_rg_phone">
-            <div id="bg_processed_data">
-                <div id="bg_rt_processed_data">
-                    <div id="txt_rg_phone">Register No.telepon</div>
-                    <div id="txt_input_phone">Masukkan No.Telepon untuk verifikasi </div>
-                    <div id="position_phone_num">
+        <div id="pg_rg_email">
+            <div id="bg_rg_email">
+                <div id="bg_rt_rg_email">
+                    <div id="txt_rg_email">Register Email</div>
+                    <div id="txt_input_email">Masukkan Email untuk verifikasi akun </div>
+
+
+                    <div id="position_email_rg">
                         <img src="assets/ic_email.png" id="ic_email" />
                         <div id="line_2"></div>
                         <input id="box_input" type="email" name="email" value="" required placeholder="Email"><br>
-                        <div class="position_reg">
-                        <div id="position_btn_next">
-                            <div class="btn_main button-brown" id="set_btn_login" type="submit">
+                        <img src="assets/ic_password.png" id="ic_password" />
+                        <div id="line_1"></div>
+                        <input id="box_input" type="password" value="" required placeholder="Password"><br>
+                        <img src="assets/ic_password.png" id="ic_password" />
+                        <div id="line_3"></div>
+                        <input id="box_input" type="password" value="" required placeholder="Konfirmasi Password"
+                            style="padding-right: 20px;"><br>
+
+                        <div id="position">
+                            <div id="position_terms_policy">
+                                <a id="terms_link" href="syarat_ketentuan.html">
+                                    <div id="terms">
+                                        Syarat Ketentuan
+                                    </div>
+                                </a>
+                                <div id="and">
+                                    dan
+                                </div>
+                                <a id="policy_link" href="kebijakan_privasi.html">
+                                    <div id="policy">
+                                        Kebijakan Privasi
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="position_btn_register">
+                            <div class="btn_main button-brown" id="set_btn_login" type="button">
                                 Register
                             </div>
+
                         </div>
-                        <div id="position_have_account">
-                            <div id="have_account">
-                                Sudah punya akun ?
-                            </div>
-                            <a id="log_in_link" href="login.html">
-                                <div id="login_have_account">
-                                    Log in
-                                </div>
-                                <div id="position_terms_policy">
-                                    <a id="terms_link" href="syarat_ketentuan.html">
-                                        <div id="terms">
-                                            Syarat Ketentuan
-                                        </div>
-                                    </a>
-                                    <div id="and">
-                                        dan
-                                    </div>
-                                    <a id="policy_link" href="kebijakan_privasi.html">
-                                        <div id="policy">
-                                            Kebijakan Privasi
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
-
-
-
                 </div>
+
+
             </div>
         </div>
 
+        <div id="page_rg_phone">
+            <div id="bg_rt_rg_phone">
+                <h4>Register Nomor Telepon</h4>
+                <h6>Masukkan No.Telepon untuk verifikasi </h6>
+                <p><input type="number"></p>
+             
+            </div>
+        </div>
+
+        
+    </div>
+
+    </div>
 
     </div>
 
