@@ -374,6 +374,12 @@
             left: 65px;
             align-items: center;
         }
+
+        #position_btn_send {
+            top: 540px;
+            left: 65px;
+            align-items: center;
+        }
         #position_btn_change {
             top: 460px;
             left: 70px;
@@ -1181,6 +1187,21 @@
             background: rgba(59, 85, 82, 1);
         }
 
+        #page_verifikasi_email {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+            background: rgba(59, 85, 82, 1);
+        }
+        #page_verifikasi_phone {
+            top: 0px;
+            left: 0px;
+            width: 360px;
+            height: 640px;
+            background: rgba(59, 85, 82, 1);
+        }
+
         #bg_rt_rg_phone {
             width: 360px;
             height: 562px;
@@ -1277,6 +1298,24 @@
 
             color: #3B5552;
         }
+        #change_phone{
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            left: 100px;
+            top: 100px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #3B5552;
+        }
         #detail_change_pw{
             position: absolute;
             width: 280px;
@@ -1290,10 +1329,123 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 14px;
-            /* or 117% */
-
-
             color: #3B5552;
+        }
+        #detail_change_phone{
+            position: absolute;
+            width: 280px;
+            height: 28px;
+            left: 40px;
+            top: 160px;
+            text-align: center;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #3B5552;
+        }
+        #page_verifikasi_email p{
+            position: absolute;
+            width: 156px;
+            height: 30px;
+            left: 102px;
+            top: 112px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        #page_verifikasi_phone p{
+            position: absolute;
+            width: 170px;
+            height: 30px;
+            left: 102px;
+            top: 112px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        #page_verifikasi_email input{
+            position: relative;
+            width: 210px;
+            height: 45px;
+            right: 26px;
+            text-align: center;
+            top: 100px;
+            outline: none;
+            font-size: 20px;
+        }
+        #page_verifikasi_phone input{
+            position: relative;
+            width: 210px;
+            height: 45px;
+            right: 26px;
+            text-align: center;
+            top: 100px;
+            outline: none;
+            font-size: 20px;
+        }
+        #send{
+            position: absolute;
+            width: 200px;
+            height: 18px;
+            left: 84px;
+            top: 259px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            color: #FFFFFF;
+
+        }
+        #gmail{
+            position: absolute;
+            width: 200px;
+            height: 18px;
+            left: 84px;
+            top: 280px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: t00;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            color: #FFFFFF;
+
+        }
+        #resend{
+            position: absolute;
+            width: 162px;
+            height: 18px;
+            left: 98px;
+            top: 330px;
+
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 10px;
+            line-height: 18px;
+            /* identical to box height */
+
+            text-align: center;
+            text-decoration-line: underline;
+
+            color: #FFFFFF;
         }
     </style>
 </head>
@@ -1764,6 +1916,38 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <div id="page_verifikasi_email">
+            <a id="back_fr_fp" href="google.com">
+                <img src="assets/ic_button_back.png" id="ic_button_back" />
+            </a>
+            <p>Verifikasi Email</p>
+            <p><input type="text"></p>
+            <h6 id="send">Kode verifikasi dikirim ke email : </h6>
+            <h6 id="gmail">ahmad@gmail.com</h6>
+            <u id="resend">Kirim ulang kode verfikasi</u>
+            <div id="position_btn_send">
+                <button class="btn_main button-brown" id="set_btn_login">
+                    Kirim
+                </button>
+            </div>
+        </div>
+
+        <div id="page_verifikasi_phone">
+            <a id="back_fr_fp" href="google.com">
+                <img src="assets/ic_button_back.png" id="ic_button_back" />
+            </a>
+            <p>Verifikasi Phone</p>
+            <p><input type="text"></p>
+            <h6 id="send">Kode verifikasi dikirim ke Phone : </h6>
+            <h6 id="gmail">0827483458</h6>
+            <u id="resend">Kirim ulang kode verfikasi</u>
+            <div id="position_btn_send">
+                <button class="btn_main button-brown" id="set_btn_login">
+                    Kirim
+                </button>
             </div>
         </div>
 
